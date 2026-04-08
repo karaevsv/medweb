@@ -1,6 +1,7 @@
 ﻿@page "/"
 @page "/login"
 @using System.Text.RegularExpressions
+@using System.Collections.Generic
 @inject NavigationManager Nav
 
 <h3>Вход в медицинский кабинет</h3> 
@@ -9,19 +10,24 @@
     <div>
         <label>@@ Электронная почта</label> 
         <input type="email" @bind="email" @oninput="@ValidateEmail" 
-            style="@(isEmailInvalid ? "border-color:red; outline:none;" : "")"/>
+            style="@(isEmailInvalid ? "border-color: red; outline: none;" : "")"/>
     </div>
 
     <div>
         <label>🔒 Пароль</label> 
         <input type="password" @bind="password" @oninput="@ValidatePwd"
-            style="@(isPasswordInvalid ? "border-color: red;" : "")"/>
+            style="@(isPasswordInvalid ? "border-color: red; outline: none" : "")"/>
      </div>
 
     <button disabled="@(isEmailInvalid || isPasswordInvalid || isLockedOut)" @onclick="AttemptLogin">Войти</button> 
+    @if (isIncorrectLogin)
+    {
+        <div style="color:red">Неверный логин или пароль.</div> 
+    }
     @if (isLockedOut)
     {
-        <div style="color:red">Слишком много неудачных попыток. Попробуйте через минуту.</div> }
+        <div style="color:red">Слишком много неудачных попыток. Попробуйте через минуту.</div> 
+    }
 
     <div>
         <a href="/register">Зарегистрироваться</a> | <a href="/forgot">Забыли пароль?</a> 
@@ -29,11 +35,12 @@
 </div>
 
 @code {
+    private List<string> failedAttempts = new  List<string>();
     private string email = "";
     private string password = "";
     
-    private int failedAttempts = 0; // Счетчик попыток [cite: 67]
     private bool isLockedOut = false;
+    private bool isIncorrectLogin = false;
 
     // Валидация email в реальном времени [cite: 60]
     private bool isEmailInvalid = true;
@@ -56,9 +63,33 @@
             !Regex.IsMatch(password, @"[!@#$%^&*]"));
     }
 
-    private void AttemptLogin()
+    private async void AttemptLogin()
     {
-        Classes.Helper.IsAuthorized = true;
-        Nav.NavigateTo("/home");
+        isIncorrectLogin = false;
+        //проверка авторизации в БД
+        bool isOkLogin = false;
+        //если всё хорошо
+        if (isOkLogin){
+            failedAttempts.Clear();
+            Classes.Helper.AuthorizedUser = new Classes.User(){Name = "Иван"};
+            Nav.NavigateTo("/home");
+        }
+        //если не получилось
+        else
+        {   
+            if (!failedAttempts.Contains(email))
+            {
+                isIncorrectLogin = true;
+                failedAttempts.Add(email);
+            }
+            else
+            {
+                failedAttempts.Remove(email);
+                isLockedOut = true;
+                await Task.Delay(60000);
+                isLockedOut = false;
+                StateHasChanged();
+            }
+        }
     }
 }

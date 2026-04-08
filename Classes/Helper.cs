@@ -7,6 +7,13 @@ namespace BlazorWasmTest.Classes
 {
     public static class Helper
     {
-        public static bool IsAuthorized = false;
+        public static bool IsAuthorized
+        {
+            get
+            {
+                return AuthorizedUser != null;
+            }
+        }
+        public static User AuthorizedUser = null;
     }
 }

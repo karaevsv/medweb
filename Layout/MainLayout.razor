@@ -1,5 +1,6 @@
 ﻿@inherits LayoutComponentBase
 @using Classes
+@inject NavigationManager Nav
 
 @if (!Helper.IsAuthorized)
 {
@@ -7,19 +8,33 @@
 }
 else
 {
-    <div class="page">
-        <div class="sidebar">
-            <NavMenu />
-        </div>
-
-        <main>
-            <div class="top-row px-4">
-                <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-            </div>
-
-            <article class="content px-4">
-                @Body
-            </article>
-        </main>
+    <div class="header" > 
+        <img src="images/logo.jpg" height="20"/>
+        <span>@Helper.AuthorizedUser.Name</span> <span style="float:right">
+        🔔 Уведомления (0) | <button @onclick="@Logout">Выход</button> </span>
     </div>
+
+    <div class="sidebar"> 
+        <a href="/main">Главная</a><br/>
+        <a href="/vitals">Мои показатели</a><br/>
+        <a href="/prescriptions">Назначения</a><br/>
+        <a href="/diary">Дневник</a><br/>
+        <a href="/stats">Статистика</a><br/>
+        <a href="/visits">Визиты</a><br/>
+        <a href="/settings">Настройки</a><br/>
+        <a href="/help">Помощь</a>
+    </div>
+
+    <div class="main-content">
+        @Body
+    </div>
+}
+
+@code
+{
+    private void Logout()
+    {
+        Helper.AuthorizedUser = null;
+        Nav.NavigateTo("/");
+    }
 }
