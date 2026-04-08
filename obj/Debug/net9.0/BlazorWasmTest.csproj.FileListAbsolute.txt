@@ -1074,10 +1074,10 @@ c:\Users\ASUS\VSCode\BlazorWasmTest\obj\Debug\net9.0\BlazorWasmTest.dll
 c:\Users\ASUS\VSCode\BlazorWasmTest\obj\Debug\net9.0\refint\BlazorWasmTest.dll
 c:\Users\ASUS\VSCode\BlazorWasmTest\obj\Debug\net9.0\BlazorWasmTest.pdb
 C:\Users\ASUS\VSCode\BlazorWasmTest\obj\Debug\net9.0\ref\BlazorWasmTest.dll
-c:\Users\ASUS\VSCode\BlazorWasmTest\bin\Debug\net9.0\wwwroot\_framework\BlazorWasmTest.wv16xkqiux.wasm
-c:\Users\ASUS\VSCode\BlazorWasmTest\bin\Debug\net9.0\wwwroot\_framework\BlazorWasmTest.66eky00n17.pdb
-c:\Users\ASUS\VSCode\BlazorWasmTest\bin\Debug\net9.0\wwwroot\_framework\BlazorWasmTest.wv16xkqiux.wasm.gz
-c:\Users\ASUS\VSCode\BlazorWasmTest\bin\Debug\net9.0\wwwroot\_framework\BlazorWasmTest.66eky00n17.pdb.gz
-c:\Users\ASUS\VSCode\BlazorWasmTest\obj\Debug\net9.0\compressed\6h1oheuanc-wv16xkqiux.gz
-c:\Users\ASUS\VSCode\BlazorWasmTest\obj\Debug\net9.0\compressed\nb9gdeijuz-66eky00n17.gz
-c:\Users\ASUS\VSCode\BlazorWasmTest\obj\Debug\net9.0\compressed\n4zkcyrv6g-7h155lleug.gz
+c:\Users\ASUS\VSCode\BlazorWasmTest\bin\Debug\net9.0\wwwroot\_framework\BlazorWasmTest.2w6svxgpst.wasm
+c:\Users\ASUS\VSCode\BlazorWasmTest\bin\Debug\net9.0\wwwroot\_framework\BlazorWasmTest.lv31dqf91r.pdb
+c:\Users\ASUS\VSCode\BlazorWasmTest\bin\Debug\net9.0\wwwroot\_framework\BlazorWasmTest.2w6svxgpst.wasm.gz
+c:\Users\ASUS\VSCode\BlazorWasmTest\bin\Debug\net9.0\wwwroot\_framework\BlazorWasmTest.lv31dqf91r.pdb.gz
+c:\Users\ASUS\VSCode\BlazorWasmTest\obj\Debug\net9.0\compressed\6h1oheuanc-2w6svxgpst.gz
+c:\Users\ASUS\VSCode\BlazorWasmTest\obj\Debug\net9.0\compressed\nb9gdeijuz-lv31dqf91r.gz
+c:\Users\ASUS\VSCode\BlazorWasmTest\obj\Debug\net9.0\compressed\n4zkcyrv6g-p8e6mx0dmy.gz

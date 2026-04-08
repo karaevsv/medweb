@@ -6,11 +6,18 @@
 
 <div class="summary-block">
     <h3>Сводка за сегодня</h3> 
+    @if (lastVital != null)
+    {
     <ul>
         <li>Последние показатели: Глюкоза @lastVital.Glucose ммоль/л, АД @lastVital.SystolicBP/@lastVital.DiastolicBP</li> 
         <li>Активных назначений: @appointments</li> 
         <li>Предстоящих визитов: @visits (на этой неделе)</li> 
     </ul>
+    }
+    else
+    {
+        <div>Нет данных за сегодня</div>
+    }
 </div>
 
 <div class="quick-actions">
@@ -37,6 +44,7 @@
             Weight = 72.5,
             Comment = "Что-то"
         };
+        lastVital = null;
         appointments = 1;
         visits = 2;
     }
