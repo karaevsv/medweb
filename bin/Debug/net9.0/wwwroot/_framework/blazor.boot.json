@@ -1,11 +1,7 @@
 {
   "mainAssemblyName": "BlazorWasmTest",
   "resources": {
-<<<<<<< HEAD
-    "hash": "sha256-j812kld2MTazPhWZuL8/4Wze9gfWM1oWck16rCFuXrM=",
-=======
-    "hash": "sha256-FZeRvSQ+FqX8NFa6FW5zaSaYpa5Zqw1Sw+qlCeoVYNc=",
->>>>>>> 15f1321c95b0cb9ea3e5415beb7f46aca8ea5efa
+    "hash": "sha256-6HHs5ZJxE+K5TtXVKrByjt3p1uti95HX5THbqI/h+U8=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.ag393jzyei.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.6n06tqyzkk.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -205,13 +201,8 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-<<<<<<< HEAD
-      "BlazorWasmTest.qbxo0qxx87.wasm": "BlazorWasmTest.wasm",
-      "BlazorWasmTest.0qhamtkrng.pdb": "BlazorWasmTest.pdb"
-=======
-      "BlazorWasmTest.6qhwwinbki.wasm": "BlazorWasmTest.wasm",
-      "BlazorWasmTest.6mx0t4hddn.pdb": "BlazorWasmTest.pdb"
->>>>>>> 15f1321c95b0cb9ea3e5415beb7f46aca8ea5efa
+      "BlazorWasmTest.m0cn3mr0me.wasm": "BlazorWasmTest.wasm",
+      "BlazorWasmTest.1h0b3en4cg.pdb": "BlazorWasmTest.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.l1ds2rhypd.js": "sha256-CU8oL4L0VAwGe3hCyxZDy7keJq9dcsWED0JKqrvlUb4="
@@ -421,17 +412,10 @@
       "WindowsBase.p8fley4coh.wasm": "sha256-aRYzLqbGeHVYVMueB/ppfGVKTJ8jPRnWCHEGfFXiSG4=",
       "mscorlib.gr56bjb982.wasm": "sha256-rGm+fePHcRdNKLvNvl2ALv504HZc6ufZZqaXcOLo8HQ=",
       "netstandard.3vbiim3d7s.wasm": "sha256-j+YhS0xT+ZUStadRqdIFX5q3MfD09IJhCcEkJ3y3Kh0=",
-<<<<<<< HEAD
-      "BlazorWasmTest.qbxo0qxx87.wasm": "sha256-SkkuUpJFZPTagwskRb4SMVusa1rT/CLtjFwg06CFEyQ="
+      "BlazorWasmTest.m0cn3mr0me.wasm": "sha256-ariTY5RLlx3GpPxRyvQRSAGYQsn66IpDm6H7uWUKV70="
     },
     "pdb": {
-      "BlazorWasmTest.0qhamtkrng.pdb": "sha256-yB27azzoDk39pZ096ByrldgyB2/7w4KL5TV1UNnOhVU="
-=======
-      "BlazorWasmTest.6qhwwinbki.wasm": "sha256-QgYiZC/lpmy7wni4rq87Jq90KAvNi2F1XqR4eU/YHsw="
-    },
-    "pdb": {
-      "BlazorWasmTest.6mx0t4hddn.pdb": "sha256-0jgbqEGwTcHE2RfKePQlRqr9jTs5s47hCqqaLdWMD1k="
->>>>>>> 15f1321c95b0cb9ea3e5415beb7f46aca8ea5efa
+      "BlazorWasmTest.1h0b3en4cg.pdb": "sha256-290mJCdrnbPt/U3IUWBhF5PaZ/SpJQ/y5ZEWAR/ld8g="
     }
   },
   "cacheBootResources": true,
