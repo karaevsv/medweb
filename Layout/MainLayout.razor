@@ -2,33 +2,35 @@
 @using Classes
 @inject NavigationManager Nav
 
-@if (!Helper.IsAuthorized)
-{
-    @Body
-}
-else
-{
-    <div class="header" > 
-        <img src="images/logo.jpg" height="20"/>
-        <span>@Helper.AuthorizedUser.Name</span> <span style="float:right">
-        🔔 Уведомления (0) | <button @onclick="@Logout">Выход</button> </span>
-    </div>
-
-    <div class="sidebar"> 
-        <a href="/main">Главная</a><br/>
-        <a href="/vitals">Мои показатели</a><br/>
-        <a href="/prescriptions">Назначения</a><br/>
-        <a href="/diary">Дневник</a><br/>
-        <a href="/stats">Статистика</a><br/>
-        <a href="/visits">Визиты</a><br/>
-        <a href="/settings">Настройки</a><br/>
-        <a href="/help">Помощь</a>
-    </div>
-
-    <div class="main-content">
+    @if (!Helper.IsAuthorized)
+    {
         @Body
-    </div>
-}
+    }
+    else
+    {
+        <div class="header" > 
+            <img src="images/logo.jpg" height="20"/>
+            <span>@Helper.AuthorizedUser.Name</span> <span style="float:right">
+            Уведомления (0) | <button @onclick="@Logout">Выход</button> </span>
+        </div>
+        <div class="page">
+            <div class="sidebar"> 
+                <a href="/main">Главная</a><br/>
+                <a href="/vitals">Мои показатели</a><br/>
+                <a href="/prescriptions">Назначения</a><br/>
+                <a href="/diary">Дневник</a><br/>
+                <a href="/stats">Статистика</a><br/>
+                <a href="/visits">Визиты</a><br/>
+                <a href="/settings">Настройки</a><br/>
+                <a href="/help">Помощь</a>
+            </div>
+            <main>
+                <article>
+                    @Body
+                </article>
+            </main>
+        </div>
+    }
 
 @code
 {

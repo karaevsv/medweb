@@ -1,5 +1,48 @@
-﻿<h3>Main</h3>
+﻿@page "/main"
+@inject NavigationManager Nav
+@using Classes
+
+<h2>Добрый день, @Helper.AuthorizedUser.Name!</h2>
+
+<div class="summary-block">
+    <h3>Сводка за сегодня</h3> 
+    <ul>
+        <li>Последние показатели: Глюкоза @lastVital.Glucose ммоль/л, АД @lastVital.SystolicBP/@lastVital.DiastolicBP</li> 
+        <li>Активных назначений: @appointments</li> 
+        <li>Предстоящих визитов: @visits (на этой неделе)</li> 
+    </ul>
+</div>
+
+<div class="quick-actions">
+    <h3>Быстрые действия</h3> 
+    <button @onclick="OpenVitalsModal">➕ Добавить показатели</button> 
+    <button>💊 Отметить прием лекарства</button> 
+    <button @onclick='() => Nav.NavigateTo("/diary")'>📝 Записать симптомы</button> 
+</div>
 
 @code {
+    Vital lastVital;
+    int appointments;
+    int visits;
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        // получаем из БД данные с последними показателями, назначениями и визитами
+        lastVital = new Vital()
+        {
+            Glucose = 5.5,
+            SystolicBP = 120,
+            DiastolicBP = 80,
+            Pulse = 80,
+            Weight = 72.5,
+            Comment = "Что-то"
+        };
+        appointments = 1;
+        visits = 2;
+    }
 
+    private void OpenVitalsModal()
+    {
+        // Логика открытия модального окна добавления показателей
+    }
 }

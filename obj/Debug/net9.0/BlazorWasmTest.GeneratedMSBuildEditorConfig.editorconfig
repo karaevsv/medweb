@@ -44,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[c:/Users/ASUS/VSCode/BlazorWasmTest/Pages/Vitals.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVml0YWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/Users/ASUS/VSCode/BlazorWasmTest/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

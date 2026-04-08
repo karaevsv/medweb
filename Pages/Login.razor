@@ -68,12 +68,12 @@
     {
         isIncorrectLogin = false;
         //проверка авторизации в БД
-        bool isOkLogin = false;
+        bool isOkLogin = true;
         //если всё хорошо
         if (isOkLogin){
             failedAttempts.Clear();
             Classes.Helper.AuthorizedUser = new Classes.User(){Name = "Иван"};
-            Nav.NavigateTo("/home");
+            Nav.NavigateTo("/main");
         }
         //если не получилось
         else
